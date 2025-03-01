@@ -23,6 +23,9 @@ namespace ZabbixViewer
         public MainWindow()
         {
             InitializeComponent();
+            var browser = new CefSharp.Wpf.ChromiumWebBrowser();
+            browser.Address = "http://192.168.1.8/zabbix/zabbix.php?action=dashboard.view&dashboardid=1&page=2";
+            Content = browser;
         }
     }
 }
